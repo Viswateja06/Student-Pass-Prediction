@@ -11,13 +11,13 @@ with open("student_model.pkl", "rb") as file:
 
 if st.button("Predict"):
     input_data = [[
-study_hours,
-attendance,
-previous_score,
-assignments
-]]
-prediction = model.predict(input_data)
-if prediction[0] == 1:
-    st.success("Prediction: PASS")
-else:
-    st.error("Prediction: FAIL")
+        study_hours,
+        attendance,
+        previous_score,
+        assignments
+    ]]
+    prediction = model.predict(input_data)
+    if prediction[0] == 1:
+        st.success("Prediction: PASS")
+    else:
+        st.error("Prediction: FAIL")
